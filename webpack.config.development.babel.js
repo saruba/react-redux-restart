@@ -16,7 +16,7 @@ config.module.rules = config.module.rules.concat([
 ]);
 config.plugins = config.plugins.concat([
   new webpack.HotModuleReplacementPlugin(),
-  // new DashboardPlugin(),
+  new DashboardPlugin(),
   new webpack.LoaderOptionsPlugin({
     debug: true,
   }),
