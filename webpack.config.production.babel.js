@@ -34,6 +34,12 @@ config.plugins = config.plugins.concat([
     },
   }),
   new ExtractTextPlugin('styles.[chunkhash].css'),
+  new webpack.LoaderOptionsPlugin({
+    debug: false,
+  }),
+  new webpack.DefinePlugin({
+    'process.env.NODE_ENV': JSON.stringify('production'),
+  }),
 ]);
 
 export default config;

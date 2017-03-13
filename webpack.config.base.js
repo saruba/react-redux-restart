@@ -16,7 +16,7 @@ const ENTRY_PATH = path.join(__dirname, 'src');
 const OUTPUT_PATH = path.join(__dirname, 'dist');
 const VENDOR_LIBS = [
   'react', 'react-dom', 'react-redux', 'react-router', 'redux',
-  'redux-thunk',
+  'redux-thunk', 'isomorphic-fetch',
 ];
 
 export default {
