@@ -60,8 +60,5 @@ export default {
       template: 'src/index.html',
     }),
     new LinkMediaHtmlWebpackPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-    }),
   ],
 };

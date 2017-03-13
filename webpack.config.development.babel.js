@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import DashboardPlugin from 'webpack-dashboard/plugin';
 import config from './webpack.config.base';
 
+
 config.module.rules = config.module.rules.concat([
   {
     test: /\.scss$/,
@@ -15,12 +16,14 @@ config.module.rules = config.module.rules.concat([
 ]);
 config.plugins = config.plugins.concat([
   new webpack.HotModuleReplacementPlugin(),
-  new DashboardPlugin(),
+  // new DashboardPlugin(),
   new webpack.LoaderOptionsPlugin({
     debug: true,
   }),
   new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify('development'),
+    'process.env': {
+      NODE_ENV: JSON.stringify('development'),
+    },
   }),
 ]);
 

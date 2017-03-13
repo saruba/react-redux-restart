@@ -5,11 +5,11 @@
   "main": "src/app.js",
   "scripts": {
     "clean": "rimraf dist",
-    "start": "NODE_ENV=development webpack-dev-server --config webpack.config.development.babel.js",
-    "dev": "NODE_ENV=development webpack-dashboard -- npm run start",
-    "build": "NODE_ENV=development npm run clean && webpack --config webpack.config.production.babel.js",
-    "build:watch": "NODE_ENV=development npm run build -- -w",
-    "build:production": "NODE_ENV=production npm run clean && webpack --config webpack.config.production.babel.js -p",
+    "start": "webpack-dev-server --config webpack.config.development.babel.js",
+    "dev": "webpack-dashboard -- npm run start",
+    "build": "npm run clean && webpack --config webpack.config.development.babel.js",
+    "build:watch": "npm run build -- -w",
+    "build:production": "npm run clean && webpack --config webpack.config.production.babel.js",
     "test": "NODE_ENV=test jest",
     "test:watch": "NODE_ENV=test npm test -- --watch"
   },
