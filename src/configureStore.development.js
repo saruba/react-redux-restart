@@ -3,12 +3,12 @@ import thunk from 'redux-thunk';
 import todoApp from './reducers';
 
 /* eslint-disable no-underscore-dangle */
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export default function configureStore() {
   return createStore(
     todoApp,
-    compose(
+    composeEnhancers(
       applyMiddleware(thunk),
-      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(),
     ),
   );
 }
