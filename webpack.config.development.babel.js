@@ -27,4 +27,9 @@ config.plugins = config.plugins.concat([
   }),
 ]);
 
+config.devServer = {
+  port: 8080,
+  hot: true,
+};
+
 export default config;
